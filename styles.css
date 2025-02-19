@@ -1,69 +1,100 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forsaken Apex | Primal Power & Health</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
-</head>
-<body>
-    <header>
-        <h1>Forsaken Apex</h1>
-        <nav>
-            <ul>
-                <li><a href="#products"> Products </a></li>
-                <li><a href="#about"> About </a></li>
-                <li><a href="#contact"> Contact </a></li>
-            </ul>
-        </nav>
-    </header>
+/* Dark Nature Theme */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #111;
+    color: white;
+}
 
-    <section id="hero">
-        <h2>Reclaim Your Strength</h2>
-        <p>Unleash your primal energy with nature's strongest testosterone boosters.</p>
-        <a href="#products" class="btn">Shop Now</a>
-    </section>
+header {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
 
-    <section id="products">
-        <h2>Ultimate Testosterone Stack</h2>
-        <div class="product-container">
-            <div class="product">
-                <img src="testosterone-bottle.jpg" alt="Dark Nature Testosterone Booster">
-                <h3>Obsidian Strength</h3>
-                <p>A blend of Tongkat Ali, Fadogia Agrestis, Boron, Pine Pollen, and Ashwagandha.</p>
-                <span>$59.99</span>
-                <button class="buy-btn" data-product="Obsidian Strength" data-price="59.99">Buy Now</button>
-            </div>
+nav ul {
+    list-style: none;
+    padding: 0;
+}
 
-            <div class="product">
-                <img src="focus-booster.jpg" alt="Focus Enhancement Supplement">
-                <h3>Primordial Focus</h3>
-                <p>Lion’s Mane, L-Theanine, Rhodiola Rosea, Alpha-GPC, and Panax Ginseng.</p>
-                <span>$49.99</span>
-                <button class="buy-btn" data-product="Primordial Focus" data-price="49.99">Buy Now</button>
-            </div>
-        </div>
-    </section>
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
 
-    <section id="customization">
-        <h2>Customize Your Supplement Stack</h2>
-        <p>Choose your preferred ingredients and tailor your testosterone-boosting experience.</p>
-        <a href="#custom-builder" class="btn">Build Your Stack</a>
-    </section>
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 
-    <section id="about">
-        <h2>Why Choose Forsaken Apex?</h2>
-        <p>Our supplements are crafted from potent, natural ingredients, designed to enhance performance and stamina.</p>
-    </section>
+#hero {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: support@forsakenapex.com</p>
-    </section>
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
 
-    <footer>
-        <p>&copy; 2025 Forsaken Apex | All Rights Reserved</p>
-    </footer>
-</body>
-</html>
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+
+.product {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.7);
+    color: white;
+    max-width: 220px;
+}
+
+.product img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.buy-btn {
+    background: linear-gradient(90deg, #ff9800, #ff5722);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+    background: linear-gradient(90deg, #ff5722, #ff9800);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 300px;
+    }
+}
